@@ -1,15 +1,15 @@
 
 public class ExtractMethod01 {
 
-	void printOwing(){
-		
+	void printOwing(double previousAmout){
+		double outstanding  = previousAmout * 1.2;
 		printBanner();
-		double outstanding  = getOutstanding();
+		outstanding = getOutstanding(outstanding);
 		printDetails(outstanding);
 		
 	}
 	
-	void getOutstanding(){
+	void getOutstanding(double initialValue){
 		Enumeration e = _orders.elements();
 		double result = 0.0;
 		//외상액 계산
