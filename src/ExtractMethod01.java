@@ -2,9 +2,9 @@
 public class ExtractMethod01 {
 
 	void printOwing(double previousAmout){
-		double outstanding  = previousAmout * 1.2;
+		
 		printBanner();
-		outstanding = getOutstanding(outstanding);
+		double outstanding  = getOutstanding(previousAmout * 1.2);
 		printDetails(outstanding);
 		
 	}
