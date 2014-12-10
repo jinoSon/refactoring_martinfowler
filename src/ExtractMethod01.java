@@ -2,19 +2,22 @@
 public class ExtractMethod01 {
 
 	void printOwing(){
-		Enumeration e = _orders.elements();
-		double outstanding = 0.0;
 		
 		printBanner();
+		double outstanding  = getOutstanding();
+		printDetails(outstanding);
 		
+	}
+	
+	void getOutstanding(){
+		Enumeration e = _orders.elements();
+		double outstanding = 0.0;
 		//외상액 계산
 		while(e.hasMoreElements()){
 			Order each = (Order) e.nextElement();
 			outstanding += each.getAmount();
 		}
-		
-		printDetails(outstanding);
-		
+		return outstanding;
 	}
 	
 	void printBanner(){
@@ -29,5 +32,7 @@ public class ExtractMethod01 {
 		System.out.println("고객명 : " + _name);
 		System.out.println("외상액 : " + outstanding);
 	}
+	
+
 
 }
