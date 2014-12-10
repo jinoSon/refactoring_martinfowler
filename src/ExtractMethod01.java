@@ -11,13 +11,13 @@ public class ExtractMethod01 {
 	
 	void getOutstanding(){
 		Enumeration e = _orders.elements();
-		double outstanding = 0.0;
+		double result = 0.0;
 		//외상액 계산
 		while(e.hasMoreElements()){
 			Order each = (Order) e.nextElement();
-			outstanding += each.getAmount();
+			result += each.getAmount();
 		}
-		return outstanding;
+		return result;
 	}
 	
 	void printBanner(){
