@@ -13,9 +13,8 @@ public class ExtractMethod01 {
 			outstanding += each.getAmount();
 		}
 		
-		//세부 내역 출력
-		System.out.println("고객명 : " + _name);
-		System.out.println("외상액 : " + outstanding);
+		printDetails(outstanding);
+		
 	}
 	
 	void printBanner(){
@@ -23,6 +22,12 @@ public class ExtractMethod01 {
 		System.out.println("**********************");
 		System.out.println("******* 고객 외상 *****");	
 		System.out.println("**********************");
+	}
+	
+	void printDetails (double outstanding){
+		//세부 내역 출력
+		System.out.println("고객명 : " + _name);
+		System.out.println("외상액 : " + outstanding);
 	}
 
 }
